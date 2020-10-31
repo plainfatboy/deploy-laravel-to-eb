@@ -13,7 +13,7 @@ deployment_output=$(eb deploy)
 
 if [[ ! deployment_output =~ "deployment completed successfully" ]]
 then
-    echo "Failed to deploy!!! Please check the detailed error in AWS console."
+    echo "Failed to deploy!!! Please check the detailed error in AWS console...."
     exit 1
 fi
 
