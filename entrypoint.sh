@@ -1,17 +1,13 @@
 #!/bin/sh
 
-ls /github/workspace
-
 export AWS_ACCESS_KEY_ID="$1"
 export AWS_SECRET_ACCESS_KEY="$2"
 
-cp -a /github/workspace ./application
-
-cd ./application
+cd /github/workspace
 
 deployment_output=$(eb deploy)
 
-if [[ ! deployment_output =~ "deployment completed successfully" ]]
+if [[ ! deployment_output =~ "deployment completed successfully" ]] :
 then
     echo "Failed to deploy!!! Please check the detailed error in AWS console...."
     exit 1
