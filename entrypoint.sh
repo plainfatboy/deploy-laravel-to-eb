@@ -5,6 +5,7 @@ export AWS_SECRET_ACCESS_KEY="$2"
 
 cd /github/workspace
 
+eb init --region "ap-southeast-1" -p "PHP 7.4 running on 64bit Amazon Linux 2" -k "deploy" CakeFulfillment
 eb deploy
 
 # deployment_output=$(eb deploy)
