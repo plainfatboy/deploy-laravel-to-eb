@@ -1,0 +1,21 @@
+# action.yml
+name: 'Deploy an application to AWS Elasticbeanstalk'
+description: 'Deploy the application in your repository to AWS Elasticbeanstalk by using official client (eb-cli).'
+inputs: 
+    aws-access-key-id:
+        description: 'AWS access key id'
+        required: true
+        default: '-'
+    aws-secret-access-key:
+        description: 'AWS secret access key'
+        required: true
+        default: '-'
+outputs:
+    deployment_output:
+        description: 'The output from the deploy command (eb deploy)'
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{ inputs.aws-access-key-id }}
+        - ${{ inputs.aws-secret-access-key }}
