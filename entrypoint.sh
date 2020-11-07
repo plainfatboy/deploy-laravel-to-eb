@@ -3,7 +3,7 @@
 export AWS_ACCESS_KEY_ID="$1"
 export AWS_SECRET_ACCESS_KEY="$2"
 
-echo AWS_ACCESS_KEY_ID
+echo $AWS_ACCESS_KEY_ID
 echo $(ls)
 
 deploymentoutput="testing output"
