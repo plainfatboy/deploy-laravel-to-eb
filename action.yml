@@ -13,8 +13,6 @@ inputs:
 outputs:
     deploymentoutput:
         description: 'The output from the deploy command (eb deploy)'
-    time:
-        description: 'The time we greeted you'
 runs:
     using: 'docker'
     image: 'Dockerfile'

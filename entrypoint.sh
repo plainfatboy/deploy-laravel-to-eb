@@ -3,11 +3,8 @@
 export AWS_ACCESS_KEY_ID="$1"
 export AWS_SECRET_ACCESS_KEY="$2"
 
-cd /github/workspace
-
-echo "Test message"
-
-echo $(ls /github/workspace)
+echo AWS_ACCESS_KEY_ID
+echo $(ls)
 
 deploymentoutput="testing output"
 
@@ -23,9 +20,6 @@ deploymentoutput="testing output"
 # fi
 
 echo "::set-output name=deploymentoutput::$deploymentoutput"
-
-time=$(date)
-echo "::set-output name=time::$time"
 
 export AWS_ACCESS_KEY_ID="****"
 export AWS_SECRET_ACCESS_KEY="****"
