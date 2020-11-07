@@ -11,8 +11,10 @@ inputs:
         required: true
         default: '-'
 outputs:
-    deployment_output:
+    deploymentoutput:
         description: 'The output from the deploy command (eb deploy)'
+    time:
+        description: 'The time we greeted you'
 runs:
     using: 'docker'
     image: 'Dockerfile'
