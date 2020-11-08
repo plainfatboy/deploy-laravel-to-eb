@@ -2,11 +2,11 @@
 name: 'Deploy an application to AWS Elasticbeanstalk'
 description: 'Deploy the application in your repository to AWS Elasticbeanstalk by using official client (eb-cli).'
 inputs: 
-    aws-access-key-id:
+    aws_access_key_id:
         description: 'AWS access key id'
         required: true
         default: '-'
-    aws-secret-access-key:
+    aws_secret_access_key:
         description: 'AWS secret access key'
         required: true
         default: '-'
@@ -17,5 +17,5 @@ runs:
     using: 'docker'
     image: 'Dockerfile'
     args:
-        - ${{ inputs.aws-access-key-id }}
-        - ${{ inputs.aws-secret-access-key }}
+        - ${{ inputs.aws_access_key_id }}
+        - ${{ inputs.aws_secret_access_key }}
